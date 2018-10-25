@@ -1,1 +1,1 @@
-my_made
+自作のEagleライブラリ
