@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.3175" unitdist="mm" unit="mm" style="lines" multiple="8" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="8" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -71,7 +71,7 @@
 </layers>
 <library>
 <packages>
-<package name="TACTILE">
+<package name="TACTILE_R">
 <wire x1="-3" y1="1.75" x2="3" y2="1.75" width="0.127" layer="21"/>
 <wire x1="3" y1="1.75" x2="3" y2="0.5" width="0.127" layer="21"/>
 <wire x1="3" y1="0.5" x2="3" y2="-0.5" width="0.127" layer="21"/>
@@ -90,8 +90,8 @@
 <wire x1="-1.475" y1="0.725" x2="1.475" y2="0.725" width="0.127" layer="21"/>
 <wire x1="1.475" y1="0.725" x2="1.475" y2="-0.725" width="0.127" layer="21"/>
 <wire x1="1.475" y1="-0.725" x2="-1.475" y2="-0.725" width="0.127" layer="21"/>
-<pad name="P$1" x="3.25" y="0" drill="1.3" diameter="2.54" rot="R90"/>
-<pad name="P$2" x="-3.25" y="0" drill="1.3" diameter="2.54" rot="R90"/>
+<pad name="P$1" x="3.25" y="0" drill="1.3" rot="R90"/>
+<pad name="P$2" x="-3.25" y="0" drill="1.3" rot="R90"/>
 <wire x1="-1.2" y1="0.5" x2="1.2" y2="0.5" width="0.127" layer="21"/>
 <wire x1="1.2" y1="0.5" x2="1.2" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="1.2" y1="-0.5" x2="-1.2" y2="-0.5" width="0.127" layer="21"/>
@@ -129,7 +129,7 @@
 <wire x1="-3.95" y1="-1.9" x2="-3.95" y2="-2.6" width="0.127" layer="21"/>
 <wire x1="-3.95" y1="-2.6" x2="-3.1" y2="-2.6" width="0.127" layer="21"/>
 </package>
-<package name="TACTILE_">
+<package name="TACTILE_L">
 <wire x1="-3" y1="1.75" x2="3" y2="1.75" width="0.127" layer="21"/>
 <wire x1="3" y1="1.75" x2="3" y2="0.5" width="0.127" layer="21"/>
 <wire x1="3" y1="0.5" x2="3" y2="-0.5" width="0.127" layer="21"/>
@@ -155,7 +155,7 @@
 <wire x1="1.2" y1="-0.5" x2="-1.2" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="-1.2" y1="-0.5" x2="-1.2" y2="0.5" width="0.127" layer="21"/>
 </package>
-<package name="ＩＳ-2235" urn="urn:adsk.eagle:footprint:27654/1" locally_modified="yes">
+<package name="ＩS-2235" urn="urn:adsk.eagle:footprint:27654/1" locally_modified="yes">
 <wire x1="-4.5" y1="1.75" x2="4.5" y2="1.75" width="0.2032" layer="21"/>
 <wire x1="4.5" y1="1.75" x2="4.5" y2="-1.75" width="0.2032" layer="21"/>
 <wire x1="4.5" y1="-1.75" x2="-4.5" y2="-1.75" width="0.2032" layer="21"/>
@@ -201,8 +201,8 @@
 <wire x1="1.905" y1="0" x2="1.27" y2="2.54" width="0.254" layer="94"/>
 <wire x1="-1.905" y1="0" x2="-0.635" y2="0" width="0.1524" layer="94"/>
 <text x="-2.54" y="0" size="1.016" layer="95" rot="R90" align="bottom-center">&gt;NAME</text>
-<pin name="P" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="P" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
 </symbol>
 <symbol name="PUSH-2">
 <wire x1="0" y1="1.905" x2="0" y2="2.54" width="0.254" layer="94"/>
@@ -247,12 +247,12 @@
 <wire x1="-5.08" y1="1.27" x2="-5.08" y2="0" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="0" x2="-5.08" y2="-1.27" width="0.254" layer="94"/>
 <text x="-5.3975" y="0" size="1.016" layer="95" rot="R90" align="bottom-center">&gt;NAME</text>
-<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="P1" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="S1" x="12.7" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="O1" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="P1" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="S1" x="12.7" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="O1" x="7.62" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
 </symbol>
 <symbol name="ON-MOM">
 <wire x1="0" y1="-3.175" x2="0" y2="-2.54" width="0.254" layer="94"/>
@@ -265,9 +265,9 @@
 <wire x1="0.508" y1="1.27" x2="1.016" y2="1.016" width="0.1524" layer="94"/>
 <wire x1="0.508" y1="1.27" x2="1.524" y2="1.27" width="0.1524" layer="94"/>
 <text x="4.1275" y="0" size="1.016" layer="95" rot="R90" align="bottom-center">&gt;NAME</text>
-<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -276,7 +276,7 @@
 <gate name="G$1" symbol="PUSH-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TACTILE">
+<device name="" package="TACTILE_R">
 <connects>
 <connect gate="G$1" pin="P" pad="P$1"/>
 <connect gate="G$1" pin="S" pad="P$2"/>
@@ -310,7 +310,7 @@
 <gate name="G$1" symbol="PUSH-1" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TACTILE_">
+<device name="" package="TACTILE_L">
 <connects>
 <connect gate="G$1" pin="P" pad="P$1"/>
 <connect gate="G$1" pin="S" pad="P$2"/>
@@ -321,12 +321,12 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="ＩＳ－２２３５">
+<deviceset name="ＩS-2235">
 <gates>
 <gate name="G$1" symbol="ON-MOM_2" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="ＩＳ-2235">
+<device name="" package="ＩS-2235">
 <connects>
 <connect gate="G$1" pin="O" pad="1.1"/>
 <connect gate="G$1" pin="O1" pad="1.2"/>
@@ -341,16 +341,37 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="IS-1250">
+<deviceset name="ＩS-1250">
 <gates>
 <gate name="G$1" symbol="ON-MOM" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="ＩＳ-2235">
+<device name="" package="ＩS-2235">
 <connects>
 <connect gate="G$1" pin="O" pad="1.1 1.2"/>
 <connect gate="G$1" pin="P" pad="2.1 2.2"/>
 <connect gate="G$1" pin="S" pad="3.1 3.2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ＩS-2235-2">
+<gates>
+<gate name="G$1" symbol="ON-MOM" x="-5.08" y="0"/>
+<gate name="G$2" symbol="ON-MOM" x="5.08" y="0"/>
+</gates>
+<devices>
+<device name="" package="ＩS-2235">
+<connects>
+<connect gate="G$1" pin="O" pad="1.1"/>
+<connect gate="G$1" pin="P" pad="2.1"/>
+<connect gate="G$1" pin="S" pad="3.1"/>
+<connect gate="G$2" pin="O" pad="1.2"/>
+<connect gate="G$2" pin="P" pad="2.2"/>
+<connect gate="G$2" pin="S" pad="3.2"/>
 </connects>
 <technologies>
 <technology name=""/>
